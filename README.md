@@ -1,4 +1,4 @@
-# AssemblyAI Real-Time Transcription Browser Example
+# AssemblyAI Real-Time Transcription with Metered.Video Video Call Embed
 
 This open-source repo provided by AssemblyAI displays how to use our real-time API in the browser!
 
