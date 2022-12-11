@@ -14,6 +14,12 @@
     <h1 class="header__title">Real-Time Transcription</h1>
     <p class="header__sub-title">Try AssemblyAI's new real-time transcription endpoint!</p>
   </header>
+  <div id="metered-frame"></div>
+    <script src="https://cdn.metered.ca/sdk/frame/1.4.3/sdk-frame.min.js"></script> <script>
+      var frame = new MeteredFrame(); frame.init({
+          roomURL: "assembly.metered.live/test",
+      }, document.getElementById("metered-frame")); 
+    </script> 
   <div class="real-time-interface">
     <p id="real-time-title" class="real-time-interface__title">Click start to begin recording!</p>
     <p id="button" class="real-time-interface__button">Start</p>
