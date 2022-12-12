@@ -1,3 +1,5 @@
+//require('@google-cloud/debug-agent').start({serviceContext: {enableCanary: true}});
+
 // required dom elements
 const buttonEl = document.getElementById('button');
 const messageEl = document.getElementById('message');

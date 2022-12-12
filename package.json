@@ -1,21 +1,39 @@
 {
-  "name": "audio-testing",
+  "name": "catlike-captions",
   "version": "1.0.0",
-  "description": "",
+  "license": "MIT",
+  "description": "Display real-time captions in video calls",
+  "engines": {
+    "node": "16.x.x"
+  },
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "server": "node ./js/server.js",
-    "client": "serve -l 3000"
+    "server": "node js/server.js",
+    "client": "serve -l 3333",
+    "deploy": "gcloud app deploy",
+    "start": "(yarn run server) & yarn run client"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "optimal prime <prime.optimal@pm.me>",
   "dependencies": {
+    "@google-cloud/debug-agent": "^7.2.0",
     "@google-cloud/functions-framework": "^3.1.2",
     "axios": "^0.21.1",
+    "concurrently": "^7.6.0",
     "cors": "^2.8.5",
     "express": "^4.17.1",
-    "serve": "^14.1.2"
+    "npm-run-all": "^4.1.5",
+    "serve": "^14.1.2",
+    "yarn": "^1.22.19"
+  },
+  "repository": "https://github.com/prime-optimal/realtime-transcription-browser-js-example.git",
+  "devDependencies": {
+    "husky": "^8.0.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
   }
 }
